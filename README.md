@@ -1,8 +1,9 @@
-#Project Description
+# Project Description
+
 Just some common utilities I've developed over the years that are shared among my various projects.
+The original CodePlex side was here: https://archive.codeplex.com/?p=commonutils
 
-
-#Details
+# Details
 
 There are numerous methods in a number of classes that have made my development tasks easier when working with .NET projects. I'm making the code available here in case anyone finds it useful. The documentation is included in the source for the most part. These libraries are continually updated as needed for my various projects, and are subject to change as required (not often, and usually for the betterment).
 
@@ -12,7 +13,8 @@ The source is in C#.NET and should be easy to compile (only a few dependencies -
 
 I don't plan on making a Nuget package for this, as it may be superseded by my CoreXT project.
 
-#Basic Highlights
+# Basic Highlights
+
 * Utility classes with miscellaneous methods to help with exceptions, objects, strings, arrays, collections, types, timing, SQL via SMO, and more.
   Examples: `Exceptions.GetFullErrorMessage(ex);` - Traverses the inner exceptions to build a simple text error message.
             `Types.ChangeType()` - A much more powerful type conversion utility, which also supports nullable types.
