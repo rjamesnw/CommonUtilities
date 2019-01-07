@@ -1,6 +1,7 @@
 ﻿#if (NETSTANDARD1_5 || NETSTANDARD1_6 || NETCOREAPP1_0 || DNXCORE50 || NETCORE45  || NETCORE451 || NETCORE50)
 #define DOTNETCORE
 #endif
+// Original Source Here: https://github.com/rjamesnw/CommonUtilities
 // (see more framework monikers here: https://docs.microsoft.com/en-us/nuget/schema/target-frameworks)
 // Defines:
 //    WEBDEV - Support web development.
