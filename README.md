@@ -11,7 +11,7 @@ Because the source supports various .NET versions (officially .NET 3.5 and up, a
 
 The source is in C#.NET and should be easy to compile (only a few dependencies - depending on defines specified).
 
-I don't plan on making a Nuget package for this, as it may be superseded by my CoreXT project.
+I don't plan on making a Nuget package for this, as it may be superseded by my CoreXT projects (which IS on Nuget).
 
 # Basic Highlights
 
