@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Common.XAML.Windows.MinimizeButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:commwin="clr-namespace:Common.XAML.Windows"
+    >
+
+    <Grid x:Name="LayoutRoot">
+        <Button x:Name="btnMinimize" Style="{StaticResource TitleBarButton}">
+            <Button.Content>
+                <Grid>
+                    <Rectangle Height="16" Width="16">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                                <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                                <GradientStop Color="#FF008EB7" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Path Width="12" Height="12" Data="M0,10 L12,10" StrokeThickness="2" Stroke="#FF004C62"/>
+                    </Grid>
+                </Grid>
+            </Button.Content>
+        </Button>
+    </Grid>
+
+</UserControl>

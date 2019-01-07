@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Common.XAML.Windows.WindowTitleBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:commwin="clr-namespace:Common.XAML.Windows"
+    >
+
+        <Grid x:Name="LayoutRoot">
+            <Grid x:Name="TitleBar" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0">
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#A0BFEBFF"/>
+                        <GradientStop Color="#A035A3D8" Offset="0.2"/>
+                        <GradientStop Color="#A035A3D8" Offset="0.8"/>
+                        <GradientStop Color="#A000354B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Rectangle x:Name="ClickHighlight" Fill="White" Opacity="0.5" Visibility="Collapsed" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="TitleText" Padding="3,3,3,3"
+                               FontSize="12" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Column="0" Grid.Row="0" />
+                <commwin:WindowTitleBarButtons x:Name="WinTitleBarButtons"
+                                                VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,2,0,3" Grid.Column="1" Grid.Row="0" />
+            </Grid>
+            </Grid>
+        </Grid>
+
+</UserControl>

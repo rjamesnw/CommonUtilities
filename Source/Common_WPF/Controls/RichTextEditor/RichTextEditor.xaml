@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="Common.XAML.Controls.RichTextEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:slcontrib="clr-namespace:SilverlightContrib.Controls;assembly=SilverlightContrib.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" GotFocus="UserControl_GotFocus">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel x:Name="spToolBar" Orientation="Horizontal">
+                <Button x:Name="btnCopy" Margin="2" Click="btnCopy_Click" ToolTipService.ToolTip="Copy (Ctrl+C or Cmd+C)" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Copy.png" />
+                </Button>
+                <Button x:Name="btnCute" Margin="2" Click="btnCut_Click" ToolTipService.ToolTip="Cut (Ctrl+X or Cmd+X)" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Cut.png" />
+                </Button>
+                <Button x:Name="btnPaste" Margin="2" Click="btnPaste_Click" ToolTipService.ToolTip="Paste (Ctrl+V or Cmd+V)" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Paste.png" />
+                </Button>
+
+                <Rectangle Width="1" Fill="Gray" Margin="4,4,4,4" />
+
+                <Button x:Name="btnBold" Margin="2" Click="btnBold_Click" ToolTipService.ToolTip="Bold" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Bold.png" />
+                </Button>
+                <Button x:Name="btnItalic" Margin="2" Click="btnItalic_Click" ToolTipService.ToolTip="Italicize" ToolTipService.Placement="Top" >
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Italic.png"/>
+                </Button>
+                <Button x:Name="btnUnderline" Margin="2" Click="btnUnderline_Click" ToolTipService.ToolTip="Underline" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Underline.png" />
+                </Button>
+
+                <Rectangle Width="1" Fill="Gray" Margin="4,4,4,4" />
+
+                <Button x:Name="btnLeft" Margin="2" Click="btnLeft_Click" ToolTipService.ToolTip="Left" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Left.png" />
+                </Button>
+                <Button x:Name="btnCenter" Margin="2" Click="btnCenter_Click" ToolTipService.ToolTip="Center" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Center.png" />
+                </Button>
+                <Button x:Name="btnRight" Margin="2" Click="btnRight_Click" ToolTipService.ToolTip="Right" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Right.png" />
+                </Button>
+                <Button x:Name="btnJustify" Margin="2" Click="btnJustify_Click" ToolTipService.ToolTip="Justify" ToolTipService.Placement="Top">
+                    <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/Justify.png" />
+                </Button>
+
+                <Rectangle Width="1" Fill="Gray" Margin="4,4,4,4" />
+
+                <StackPanel>
+                    <Button x:Name="btnFontColor" Margin="2" Click="btnFontColor_Click" ToolTipService.ToolTip="Font Color" ToolTipService.Placement="Top">
+                        <Image Source="/Common_SL;component/Controls/RichTextEditor/Images/FontColor.png" />
+                    </Button>
+                    <Popup x:Name="puFontColorPicker">
+                        <StackPanel>
+                            <slcontrib:ColorPicker x:Name="cpFontColorPicker" SelectedColorChanged="cpFontColorPicker_SelectedColorChanged" />
+                            <Button x:Name="btnChangeTextColor" Content="Change Text Color" Click="btnChangeTextColor_Click" />
+                        </StackPanel>
+                    </Popup>
+                </StackPanel>
+                <ComboBox x:Name="cbFontName" Margin="2" SelectedIndex="0" SelectionChanged="cbFontName_SelectionChanged" ToolTipService.ToolTip="Font" ToolTipService.Placement="Top">
+                    <ComboBox.Items>
+                        <!--FontFamilyNames="Arial:Arial,Arial Black:Arial Black,Comic Sans MS:Comic Sans MS,Courier New:Courier New,Georgia:Georgia,Lucida Grande:Lucida Grande,Lucida Grande Unicode:Lucida Grande Unicode,Times New Roman:Times New Roman,Trebuchet MS:Trebuchet MS,Verdana:Verdana"-->
+                        <ComboBoxItem Content="Arial" />
+                        <ComboBoxItem Content="Arial Black" />
+                        <ComboBoxItem Content="Comic Sans MS" />
+                        <ComboBoxItem Content="Courier New" />
+                        <ComboBoxItem Content="Georgia" />
+                        <ComboBoxItem Content="Lucida Grande" />
+                        <ComboBoxItem Content="Lucida Grande Unicode" />
+                        <ComboBoxItem Content="Times New Roman" />
+                        <ComboBoxItem Content="Trebuchet MS" />
+                        <ComboBoxItem Content="Verdana" />
+                    </ComboBox.Items>
+                </ComboBox>
+
+                <Grid Margin="2">
+                    <ComboBox x:Name="cbFontSize" Width="54" SelectedIndex="0"  SelectionChanged="cbFontSize_SelectionChanged">
+                        <ComboBox.Items>
+                            <ComboBoxItem Content="8" />
+                            <ComboBoxItem Content="9" />
+                            <ComboBoxItem Content="10" />
+                            <ComboBoxItem Content="11" />
+                            <ComboBoxItem Content="12" />
+                            <ComboBoxItem Content="14" />
+                            <ComboBoxItem Content="16" />
+                            <ComboBoxItem Content="18" />
+                            <ComboBoxItem Content="20" />
+                            <ComboBoxItem Content="22" />
+                            <ComboBoxItem Content="24" />
+                            <ComboBoxItem Content="26" />
+                            <ComboBoxItem Content="28" />
+                            <ComboBoxItem Content="36" />
+                            <ComboBoxItem Content="48" />
+                            <ComboBoxItem Content="72" />
+                        </ComboBox.Items>
+                    </ComboBox>
+                    <TextBox x:Name="tbFontSize" Width="32" Height="16" Margin="3,0,16,0" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="0,-2,0,0"
+                             LostFocus="tbFontSize_LostFocus" KeyDown="tbFontSize_KeyDown" ToolTipService.ToolTip="Font Size" ToolTipService.Placement="Top" />
+                </Grid>
+
+            </StackPanel>
+
+            <RichTextBox x:Name="rtbEditor" Grid.Row="1" />
+            <ScrollViewer x:Name="svViewer" Grid.Row="1" Visibility="Collapsed" HorizontalScrollBarVisibility="Disabled">
+                <RichTextBlock x:Name="rtbViewer" />
+            </ScrollViewer>
+
+        </Grid>
+    </Grid>
+</UserControl>

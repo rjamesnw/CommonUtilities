@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Common.XAML.Windows.WindowTitleBarButtons"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:commwin="clr-namespace:Common.XAML.Windows"
+   >
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Orientation="Horizontal">
+            <commwin:MinimizeButton x:Name="btnMinimizeButton" />
+            <Rectangle Width="1" />
+            <commwin:MaximizeButton x:Name="btnMaximizeButton" />
+            <Rectangle Width="1" />
+            <commwin:CloseButton x:Name="btnCloseButton" />
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A933682-1076-49A7-8B9A-9939BE6CAB75}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WPF</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v1.1' ">V1_1</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">V2</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">V3</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">V3_5</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">V4</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">V4_5</CustomConstants>
+    <DefineConstants>$(DefineConstants) $(CustomConstants)</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v1.1' ">V1_1</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">V2</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">V3</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">V3_5</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">V4</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">V4_5</CustomConstants>
+    <DefineConstants>WPF TRACE V3_5</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASync\AsyncCTPExtensions.cs" />
+    <Compile Include="BindableTooltip.cs" />
+    <Compile Include="ClickHandler.cs" />
+    <Compile Include="Controls\GridStackPanel.cs" />
+    <Compile Include="Controls\RadioGroup.cs" />
+    <Compile Include="Controls\ScrollViewer.cs" />
+    <Compile Include="Controls\TextBlock.cs" />
+    <Compile Include="Controls\UniformGrid.cs" />
+    <Compile Include="Controls\XListBox.cs" />
+    <Compile Include="Converters.cs" />
+    <Compile Include="CustomValidation.cs" />
+    <Compile Include="DataGridColumns.cs" />
+    <Compile Include="DragAndDrop.cs" />
+    <Compile Include="Effects.cs" />
+    <Compile Include="IsolatedStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripting.cs" />
+    <Compile Include="StyleLoader.cs" />
+    <Compile Include="Tasks\Tasks.cs" />
+    <Compile Include="TemplateBind.cs" />
+    <Compile Include="UIDSystem.cs" />
+    <Compile Include="Utilities\DependencyPropertyAttribute.cs" />
+    <Compile Include="Utilities\DependencyPropertyGenerator.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DependencyPropertyGenerator.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="Utilities\Utilities_XAML.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Utilities\DependencyPropertyGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DependencyPropertyGenerator.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\center.png" />
+    <Content Include="Images\default.png" />
+    <Content Include="Images\left.png" />
+    <Content Include="Images\right.png" />
+    <Content Include="Images\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Collections\" />
+    <Folder Include="Communications\" />
+    <Folder Include="Controls\FileUploader\" />
+    <Folder Include="Controls\HtmlFrame\" />
+    <Folder Include="Controls\RichTextEditor\" />
+    <Folder Include="Windows\" />
+  </ItemGroup>
+  <Import Project="..\Common.Shared\Common.Shared.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

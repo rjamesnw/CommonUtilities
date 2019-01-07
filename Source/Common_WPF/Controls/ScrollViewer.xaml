@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Common.Silverlight.Controls.ScrollViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+
+    <Grid x:Name="LayoutRoot">
+        <ScrollViewer x:Name="ContentScrollViewer" x:FieldModifier="public"
+                        Background="{Binding Path=Background, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        BorderBrush="{Binding Path=BorderBrush, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        BorderThickness="{Binding Path=BorderThickness, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        Width="{Binding Path=Width, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        Height="{Binding Path=Height, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        MaxWidth="{Binding Path=MaxWidth, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        MaxHeight="{Binding Path=MaxHeight, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        Margin="{Binding Path=Margin, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        Padding="{Binding Path=Padding, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        VerticalContentAlignment="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        HorizontalContentAlignment="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        HorizontalScrollBarVisibility="{Binding Path=HorizontalScrollBarVisibility, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        VerticalScrollBarVisibility="{Binding Path=VerticalScrollBarVisibility, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                        />
+    </Grid>
+
+</UserControl>

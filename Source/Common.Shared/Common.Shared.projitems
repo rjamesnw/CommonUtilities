@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>73e84b6b-ddf7-4e68-bb19-cef8fba0a5ba</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Common.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\InteropCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\WeakReferenceList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communications\CommonValidations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Communications\Encryption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compression\ZipStorer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\TextReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Utilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Utilities_DotNet.cs" />
+  </ItemGroup>
+</Project>

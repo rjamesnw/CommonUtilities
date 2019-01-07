@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Common.XAML.Windows.Window"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:comm="clr-namespace:Common.XAML.Windows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <Grid x:Name="LayoutRoot" Background="#FFBEE1FF">
+        <Border BorderThickness="2,2,2,2" x:Name="Border">
+            <Border.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00B0D6"/>
+                    <GradientStop Color="#FF006D86" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Grid x:Name="WindowFrame">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <comm:WindowTitleBar x:Name="WindowTitleBar" Title="{Binding Path=Parent.Title, ElementName=LayoutRoot}" />
+
+                <ContentPresenter x:Name="cpWindowContent" Margin="3,3,3,3" Grid.Column="0" Grid.Row="1" />
+
+                <StackPanel x:Name="ButtonPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Grid.Column="0" Grid.Row="2">
+                    <Button x:Name="YesButton" Content="Yes" Width="42" Margin="3,3,3,3" />
+                    <Button x:Name="NoButton" Content="No" Width="42" Margin="3,3,3,3" />
+                    <Button x:Name="OkButton" Content="Ok" Width="42" Margin="3,3,3,3" />
+                    <Button x:Name="CancelButton" Content="Cancel" Width="42" Margin="3,3,3,3" />
+                </StackPanel>
+
+            </Grid>
+        </Border>
+    </Grid>
+
+</UserControl>

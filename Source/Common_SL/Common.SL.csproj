@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{05B2286A-AFB2-475E-BC6F-648E553E8FE6}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common.SL</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v1.1' ">V1_1</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">V2</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">V3</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">V3_5</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">V4</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">V4_5</CustomConstants>
+    <DefineConstants>$(DefineConstants) $(CustomConstants)</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v1.1' ">V1_1</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">V2</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.0' ">V3</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v3.5' ">V3_5</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v4.0' ">V4</CustomConstants>
+    <CustomConstants Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">V4_5</CustomConstants>
+    <DefineConstants>$(DefineConstants) $(CustomConstants)</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Microsoft.Bcl.Async.1.0.16\lib\sl4\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Microsoft.Bcl.Async.1.0.16\lib\sl4\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Silverlight, Version=1.0.16.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Microsoft.Bcl.Async.1.0.16\lib\sl4\Microsoft.Threading.Tasks.Extensions.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="SilverlightContrib">
+      <HintPath>..\..\..\..\Silverlight\SilverlightContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverlightContrib.Controls">
+      <HintPath>..\..\..\..\Silverlight\SilverlightContrib.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverlightContrib.Data">
+      <HintPath>..\..\..\..\Silverlight\SilverlightContrib.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=2.5.19.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Microsoft.Bcl.1.0.19\lib\sl5\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Threading.Tasks, Version=2.5.19.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Microsoft.Bcl.1.0.19\lib\sl5\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Serialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Utils, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.XPath, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\Collections\InteropCollection.cs">
+      <Link>Collections\InteropCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Collections\ObservableDictionary.cs">
+      <Link>Collections\ObservableDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Collections\WeakReferenceList.cs">
+      <Link>Collections\WeakReferenceList.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Communications\CommonValidations.cs">
+      <Link>Data\CommonValidations.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Communications\Encryption.cs">
+      <Link>Data\Encryption.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Utilities\TextReader.cs">
+      <Link>Utilities\TextReader.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Utilities\Utilities.cs">
+      <Link>Utilities\Utilities.cs</Link>
+    </Compile>
+    <Compile Include="ASync\AsyncCTPExtensions.cs" />
+    <Compile Include="BindableTooltip.cs" />
+    <Compile Include="ClickHandler.cs" />
+    <Compile Include="Controls\GridStackPanel.cs" />
+    <Compile Include="Controls\HtmlFrame\FrameworkElementHelpers.cs" />
+    <Compile Include="Controls\HtmlFrame\HtmlFrame.cs" />
+    <Compile Include="Controls\RichTextEditor\RichTextEditor.xaml.cs">
+      <DependentUpon>RichTextEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScrollViewer.cs" />
+    <Compile Include="Controls\TextBlock.cs" />
+    <Compile Include="ApplicationMessageSender.cs" />
+    <Compile Include="Tasks\Tasks.cs" />
+    <Compile Include="Converters.cs" />
+    <Compile Include="CustomValidation.cs" />
+    <Compile Include="Effects.cs" />
+    <Compile Include="IsolatedStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\UniformGrid.cs" />
+    <Compile Include="Controls\XListBox.cs" />
+    <Compile Include="Utilities\DependencyPropertyAttribute.cs" />
+    <Compile Include="Utilities\Utilities_XAML.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\RichTextEditor\RichTextEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Controls\RichTextEditor\Images\bullets.png" />
+    <Resource Include="Images\center.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Copy.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Cut.png" />
+    <Resource Include="Controls\RichTextEditor\Images\dedent.png" />
+    <Resource Include="Controls\RichTextEditor\Images\happy.png" />
+    <Resource Include="Controls\RichTextEditor\Images\image.png" />
+    <Resource Include="Controls\RichTextEditor\Images\indent.png" />
+    <Resource Include="Images\left.png" />
+    <Resource Include="Controls\RichTextEditor\Images\link.png" />
+    <Resource Include="Controls\RichTextEditor\Images\numbers.png" />
+    <Resource Include="Controls\RichTextEditor\Images\painter.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Paste.png" />
+    <Resource Include="Controls\RichTextEditor\Images\redo.png" />
+    <Resource Include="Images\right.png" />
+    <Resource Include="Images\save.png" />
+    <Resource Include="Controls\RichTextEditor\Images\strike.png" />
+    <Resource Include="Controls\RichTextEditor\Images\subscript.png" />
+    <Resource Include="Controls\RichTextEditor\Images\superscript.png" />
+    <Resource Include="Controls\RichTextEditor\Images\table.png" />
+    <Resource Include="Controls\RichTextEditor\Images\undo.png" />
+    <Resource Include="Controls\RichTextEditor\Images\unhappy.png" />
+    <Resource Include="Controls\RichTextEditor\Images\wink.png" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Utilities\DependencyPropertyGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DependencyPropertyGenerator.cs</LastGenOutput>
+    </None>
+    <Resource Include="Images\default.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Designer.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Edit.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Picture.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Folder.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Save.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Bold.png" />
+    <Resource Include="Controls\RichTextEditor\Images\FontColor.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Italic.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Underline.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Center.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Justify.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Left.png" />
+    <Resource Include="Controls\RichTextEditor\Images\Right.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\..\..\..\Microsoft.Bcl.Build.1.0.7\tools\Microsoft.Bcl.Build.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
